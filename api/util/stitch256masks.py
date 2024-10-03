@@ -1,16 +1,23 @@
 from PIL import Image
 import os
+import re
 
 def stitch256masks(
-    input_folder = 'tempData/patches',
-    output_file = '???'
+    input_folder = 'tempData/patches_masks',
+    output_file = 'tempData/finalOutput/stiched_image.png'
 ):
 
 
 
-    # Load all PNG file names from the directory
-    png_files = sorted([f for f in os.listdir(input_folder) if f.endswith('.png')])
+    # Function to extract the numeric part from the filename
+    def extract_number(filename):
+        match = re.search(r'(\d+)', filename)  # Find the first occurrence of digits in the filename
+        return int(match.group()) if match else 0  # Return the number if found, otherwise return 0
 
+    # Get list of PNG files and sort them based on the numeric part
+    png_files = sorted([f for f in os.listdir(input_folder) if f.endswith('.png')],
+                    key=extract_number)
+    print(png_files)
     # Check if we have 256 files
     if len(png_files) != 256:
         raise ValueError("There should be exactly 256 PNG files in the folder.")

@@ -8,7 +8,7 @@ from patchify import patchify
 import pyproj
 
 # 1. Authenticate with NASA Earthdata
-auth = earthaccess.login()
+auth = earthaccess.login(strategy="netrc")
 
 # bounding_box = (72.49658, 32.98648, 72.66797, 33.14018)
 # temporal_range = ("2023-04-01", "2023-12-01")
@@ -16,19 +16,21 @@ auth = earthaccess.login()
 def downloadTile(
         bounding_box,
         temporal_range,
-        output_dir,
+        output_dir='tempData/tiles',
         short_name='HLSS30',
         cloud_hosted=True,
         cloud_cover=(0, 30),
         rgb_bands = ['B02', 'B03', 'B04', 'B05', 'B06', 'B07']
         ):
     
+    print(bounding_box)
+    
     # 3. Search for the dataset (e.g., Sentinel-2 or Landsat-8) in cloud-hosted format
     results = earthaccess.search_data(
         short_name=short_name,
         cloud_hosted=cloud_hosted,  # Prefer cloud-hosted data for easy access
         temporal=temporal_range,  # Specify the date range of interest
-        bounding_box=bounding_box,  # Use the bounding box filter,
+        bounding_box=(bounding_box[0], bounding_box[1], bounding_box[2], bounding_box[3]),  # Use the bounding box filter,
         cloud_cover=cloud_cover,  # Filter for images with less than 30% cloud cover
     )
 
@@ -39,7 +41,7 @@ def downloadTile(
     selected_results = results[0], results[len(results)//2], results[-1]
       # Blue, Green, Red, NIR, SWIR, SWIR 2
 
-    download_dir = Path('tempData/tiles')
+    download_dir = Path(output_dir)
     download_dir.mkdir(parents=True, exist_ok=True)
 
     rgb_files = []
