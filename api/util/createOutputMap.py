@@ -13,9 +13,18 @@ def generate_random_name(length=8):
     letters = string.ascii_lowercase
     return ''.join(random.choice(letters) for _ in range(length))
 
+def get_tile_name(filename):
+    # Split the filename by periods
+    parts = filename.split('.')
+    
+    # The tile name is the 3rd element in the list (index 2)
+    tile_name = parts[2]
+    
+    return tile_name
+
 def create_map(bounding_box, temporal_range):
     # Step 1: Download the tiles
-    # tiles_dir, tiff_files = downloadTile(bounding_box, temporal_range)
+    tiles_dir, tiff_files = downloadTile(bounding_box, temporal_range)
     # print("Tiles downloaded to: ", tiles_dir)
     directory = '/home/vision-16/CropTypeMap/Portal/server/tempData/tiles'
 
@@ -23,7 +32,7 @@ def create_map(bounding_box, temporal_range):
     tiff_files = os.listdir(directory)
     tiff_files = [(directory + "/" + t) for t in tiff_files]
     # Extract the tile name from the first file (assuming it's in the filename)
-    tile_name = "T42RVR"#os.path.basename(tiff_files[0]).split('.')[0]
+    tile_name = get_tile_name(tiff_files[0]) #os.path.basename(tiff_files[0]).split('.')[0]
     print(f"Tile name: {tile_name}")
 
     # Step 2: Patchify the tiles
