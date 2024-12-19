@@ -1,0 +1,15 @@
+{
+    "name": "wluttuna",
+    "description": "(Test only) UNet outputs for tile T42RXS",
+    "model": "UNet trained on Prithvi Crop Classification",
+    "source": "NASA HLS Sentinel-2 30m",
+    "tiles": [
+        [
+            "stitched_tile.png",
+            28.911085569775096,
+            27.93339716855491,
+            71.15189496894727,
+            70.01640656053546
+        ]
+    ]
+}

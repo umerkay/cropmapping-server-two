@@ -25,9 +25,9 @@ def get_tile_name(filename):
 def create_map(bounding_box, temporal_range):
     # Step 1: Download the tiles
     tiles_dir, tiff_files = downloadTile(bounding_box, temporal_range)
-    # print("Tiles downloaded to: ", tiles_dir)
+    print("Tiles downloaded to: ", tiles_dir)
     directory = '/home/vision-16/CropTypeMap/Portal/server/tempData/tiles'
-
+    # print("hi")
     # List all files and directories
     tiff_files = os.listdir(directory)
     tiff_files = [(directory + "/" + t) for t in tiff_files]

@@ -45,6 +45,7 @@ def get_tileinfo():
 @map_bp.route('/data/<path:filepath>', methods=['GET'])
 def serve_mapdata(filepath):
     try:
+        # return jsonify({"hi": "there"})
         # Serve the requested file from the mapdata folder
         return send_from_directory(MAPDATA_FOLDER, filepath)
     except FileNotFoundError:

@@ -1,0 +1,15 @@
+{
+    "name": "scvgilyp",
+    "description": "(Test only) UNet outputs for tile T42RYU",
+    "model": "UNet trained on Prithvi Crop Classification",
+    "source": "NASA HLS Sentinel-2 30m",
+    "tiles": [
+        [
+            "stitched_tile.png",
+            30.692783115760562,
+            29.726055483658396,
+            72.23356253864947,
+            71.06736346307093
+        ]
+    ]
+}
