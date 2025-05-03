@@ -52,7 +52,7 @@ def createMasks():
         # Pass the image through the model
         model.eval()
         with torch.no_grad():
-            print(image_tensor.shape)
+            # print(image_tensor.shape)
             prediction = model(image_tensor)
             pred_mask = torch.argmax(prediction, dim=1).squeeze(0).cpu().numpy()  # (H, W)
 
@@ -63,7 +63,7 @@ def createMasks():
         chip_id = os.path.basename(image_path).replace('_merged.tif', '')
         save_path = os.path.join(save_dir, f"{chip_id}_mask.png")
         Image.fromarray(rgb_mask).save(save_path)
-        print(f"Saved mask to {save_path}")
+        # print(f"Saved mask to {save_path}")
 
     # Main function to process all images in a directory
     def process_directory(model, input_dir, save_dir, device):
