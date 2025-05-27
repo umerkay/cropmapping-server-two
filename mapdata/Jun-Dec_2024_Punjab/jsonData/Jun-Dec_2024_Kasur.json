@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Kasur for Jun-Dec 2024",
+  "cropTypeData": {
+    "Wheat": 0,
+    "Cotton": 7420,
+    "Others": 69645
+  },
+  "landUseData": {
+    "Natural": 57341,
+    "Urban/Barren": 841621
+  }
+}

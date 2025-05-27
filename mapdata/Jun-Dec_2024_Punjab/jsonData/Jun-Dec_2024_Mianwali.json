@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Mianwali for Jun-Dec 2024",
+  "cropTypeData": {
+    "Wheat": 0,
+    "Cotton": 36550,
+    "Others": 337474
+  },
+  "landUseData": {
+    "Natural": 40239,
+    "Urban/Barren": 661630
+  }
+}

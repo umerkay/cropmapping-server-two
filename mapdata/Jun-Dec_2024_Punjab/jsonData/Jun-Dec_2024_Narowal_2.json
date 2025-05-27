@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Narowal 2 for Jun-Dec 2024",
+  "cropTypeData": {
+    "Wheat": 0,
+    "Cotton": 44754,
+    "Others": 74996
+  },
+  "landUseData": {
+    "Natural": 801,
+    "Urban/Barren": 121148
+  }
+}

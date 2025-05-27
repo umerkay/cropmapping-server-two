@@ -30,7 +30,7 @@ class CropDataset(Dataset):
             raise ValueError(f"Unexpected image shape: {image.shape}")
 
         # Normalize the image
-        image = image.astype(np.float32) / 255.0
+        image = image.astype(np.float32) / 10000
 
         # Convert numpy arrays to PyTorch tensors
         image_tensor = torch.tensor(image).permute(2, 0, 1)  # (C, H, W)

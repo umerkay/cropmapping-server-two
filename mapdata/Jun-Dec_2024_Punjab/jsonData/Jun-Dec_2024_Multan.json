@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Multan for Jun-Dec 2024",
+  "cropTypeData": {
+    "Wheat": 0,
+    "Cotton": 9323,
+    "Others": 105214
+  },
+  "landUseData": {
+    "Natural": 2654,
+    "Urban/Barren": 997167
+  }
+}

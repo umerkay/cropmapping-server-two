@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Matiari for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 45161,
+    "Cotton": 0,
+    "Others": 123583
+  },
+  "landUseData": {
+    "Natural": 496,
+    "Urban/Barren": 194238
+  }
+}

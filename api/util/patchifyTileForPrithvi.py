@@ -2,7 +2,7 @@ import os
 import rasterio
 import numpy as np
 
-def patchifyTile(tiff_files, output_folder = "tempData/patches"):
+def patchifyTile(tiff_files, output_folder = "/home/umer/projects/vector_studio/icons/cropmapping-server-two/tempData/patches", save_to_disk=True):
     patch_size = 224
 
     def create_patches(tiff_files):
@@ -16,8 +16,6 @@ def patchifyTile(tiff_files, output_folder = "tempData/patches"):
                 profile = src.profile  # Get the profile for metadata
                 
                 # Create patches
-                print(img.shape)
-                # patches = patchify(img, (224, 224), step=224) 
                 # Get dimensions of the image
                 height, width = img.shape
                 
@@ -29,33 +27,21 @@ def patchifyTile(tiff_files, output_folder = "tempData/patches"):
                         count += 1
                         patches.append(patch)
 
-                print("From single file:", len(patches))
-                print("Each patch of size:", patches[-1].shape)
                 all_patches.append(patches)
-                # print(patches[0].shape)
-                # Reshape and stack patches along the new dimension
-                # stacked_patches.append(patches)
         
-        # Concatenate patches along the channel dimension
-        # stacked_patches = np.concatenate(all_patches, axis=-1)
-        # Stack patches along the channel dimension
         # Iterate through each list of arrays
         all_data = []
         for data_list in all_patches:
             # Convert the list of arrays to a NumPy array and append to all_data
             all_data.append(np.array(data_list))
 
-        # Now all_data is a list of NumPy arrays where each array has the shape (256, 224, 224)
-
         # Stack the arrays along a new axis to get the desired shape
         result = np.stack(all_data, axis=-1)  # This will give you shape (256, 224, 224, 18)
         print(result.shape)
         reshaped_result = np.transpose(result, (0, 3, 1, 2))
-        # stacked_patches = np.stack(all_patches, axis=-1)
         return reshaped_result, profile
 
     def save_patches(patches, profile, output_folder):
-
         if not os.path.exists(output_folder):
             os.makedirs(output_folder)
         
@@ -78,6 +64,10 @@ def patchifyTile(tiff_files, output_folder = "tempData/patches"):
 
     patches, profile = create_patches(tiff_files)
     print(patches.shape)
-    save_patches(patches, profile, output_folder)
-
-    return output_folder, len(patches), patches.shape
+    
+    if save_to_disk:
+        save_patches(patches, profile, output_folder)
+        return output_folder, len(patches), patches.shape
+    else:
+        # Return patches directly for in-memory processing
+        return patches, profile

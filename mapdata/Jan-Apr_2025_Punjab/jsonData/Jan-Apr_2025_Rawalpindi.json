@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Rawalpindi for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 65140,
+    "Cotton": 0,
+    "Others": 119825
+  },
+  "landUseData": {
+    "Natural": 66,
+    "Urban/Barren": 1012632
+  }
+}

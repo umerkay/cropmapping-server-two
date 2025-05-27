@@ -1,7 +1,6 @@
 .env
 tempData
-mapData
-mapdata
+tempdata
 # api/model
 
 # py cache

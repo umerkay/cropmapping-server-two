@@ -8,7 +8,7 @@ from skimage import exposure
 from api.model.model import UNet  # Assuming your UNet model is imported from a file
 from api.model.dataloader import CropDataset  # If needed, otherwise you can customize loading here
 
-def createMasks():
+def createMasks(input_patches=None, profile=None, return_memory_masks=True):
     # Define the color mapping for each class
     CLASS_COLORS = {
         0: (0, 0, 0),            # Black
@@ -37,55 +37,92 @@ def createMasks():
 
         return rgb_mask
 
-    # Function to load image and make prediction
-    def process_and_save(model, image_path, save_dir, device):
-        # Load the image
-        image = tifffile.imread(image_path).astype(np.float32) / 255.0
-
-        # Ensure the image has the correct shape
-        # if image.shape[2] != 18:
-            # raise ValueError(f"Unexpected image shape: {image.shape}")
-        
-        # Convert to PyTorch tensor and move to device
-        image_tensor = torch.tensor(image).unsqueeze(0).to(device)  # (1, C, H, W)
-
-        # Pass the image through the model
-        model.eval()
-        with torch.no_grad():
-            # print(image_tensor.shape)
-            prediction = model(image_tensor)
-            pred_mask = torch.argmax(prediction, dim=1).squeeze(0).cpu().numpy()  # (H, W)
-
-        # Convert the predicted mask to RGB using the class colors
-        rgb_mask = convert_mask_to_rgb(pred_mask)
-
-        # Save the RGB mask as a PNG
-        chip_id = os.path.basename(image_path).replace('_merged.tif', '')
-        save_path = os.path.join(save_dir, f"{chip_id}_mask.png")
-        Image.fromarray(rgb_mask).save(save_path)
-        # print(f"Saved mask to {save_path}")
-
-    # Main function to process all images in a directory
-    def process_directory(model, input_dir, save_dir, device):
-        os.makedirs(save_dir, exist_ok=True)  # Create the save directory if it doesn't exist
-        for filename in os.listdir(input_dir):
-            if filename.endswith('.tif'):
-                image_path = os.path.join(input_dir, filename)
-                process_and_save(model, image_path, save_dir, device)
-
     # Load the model and checkpoint
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = UNet(in_channels=18, out_channels=14).to(device)
-    checkpoint_path = "/home/vision-16/CropTypeMap/Portal/server/api/model/unet_best.pth"  # Adjust as needed
+    checkpoint_path = "/home/umer/projects/vector_studio/icons/cropmapping-server-two/api/model/unet_best.pth"
     model.load_state_dict(torch.load(checkpoint_path))
     model.to(device)
     print(f"Model loaded from {checkpoint_path}")
 
-    # Define the input directory and save directory
-    input_dir = "tempData/patches"
-    save_dir = "tempData/patches_masks"
-
-    # Process all files and save the masks
-    process_directory(model, input_dir, save_dir, device)
+    save_dir = "/home/umer/projects/vector_studio/icons/cropmapping-server-two/tempData/patches_masks"
+    os.makedirs(save_dir, exist_ok=True)  # Create the save directory if it doesn't exist
     
-    return save_dir
+    # Arrays to store masks if we're returning them in memory
+    rgb_masks = []
+    class_masks = []
+    
+    if input_patches is not None:
+        # Process patches directly from memory
+        # Iterate through each patch
+        for i in range(input_patches.shape[0]):
+            # Get the current patch
+            image = input_patches[i].astype(np.float32) / 255.0
+            
+            # Convert to PyTorch tensor and move to device
+            image_tensor = torch.tensor(image).unsqueeze(0).to(device)  # (1, C, H, W)
+            
+            # Pass the image through the model
+            model.eval()
+            with torch.no_grad():
+                prediction = model(image_tensor)
+                pred_mask = torch.argmax(prediction, dim=1).squeeze(0).cpu().numpy()  # (H, W)
+            
+            # Convert the predicted mask to RGB using the class colors
+            rgb_mask = convert_mask_to_rgb(pred_mask)
+            
+            if return_memory_masks:
+                # Store masks in memory
+                rgb_masks.append(rgb_mask)
+                class_masks.append(pred_mask)
+            
+            # Still save to disk for compatibility with existing code
+            save_path = os.path.join(save_dir, f"patch_{i}_mask.png")
+            Image.fromarray(rgb_mask).save(save_path)
+            
+            raw_tiff_save_path = os.path.join(save_dir, f"patch_{i}_class.tif")
+            tifffile.imwrite(raw_tiff_save_path, pred_mask.astype(np.uint8))
+    else:
+        # Function to load image and make prediction
+        def process_and_save(model, image_path, save_dir, device):
+            # Load the image
+            image = tifffile.imread(image_path).astype(np.float32) / 255.0
+            
+            # Convert to PyTorch tensor and move to device
+            image_tensor = torch.tensor(image).unsqueeze(0).to(device)  # (1, C, H, W)
+
+            # Pass the image through the model
+            model.eval()
+            with torch.no_grad():
+                prediction = model(image_tensor)
+                pred_mask = torch.argmax(prediction, dim=1).squeeze(0).cpu().numpy()  # (H, W)
+
+            # Convert the predicted mask to RGB using the class colors
+            rgb_mask = convert_mask_to_rgb(pred_mask)
+
+            # Save the RGB mask as a PNG
+            chip_id = os.path.basename(image_path).replace('_merged.tif', '')
+            save_path = os.path.join(save_dir, f"{chip_id}_mask.png")
+            Image.fromarray(rgb_mask).save(save_path)
+            
+            # Save the raw class predictions as a TIFF
+            raw_tiff_save_path = os.path.join(save_dir, f"{chip_id}_class.tif")
+            tifffile.imwrite(raw_tiff_save_path, pred_mask.astype(np.uint8))
+            
+            return rgb_mask, pred_mask
+
+        # Process all files in input_dir
+        input_dir = "/home/umer/projects/vector_studio/icons/cropmapping-server-two/tempData/patches"
+        for i, filename in enumerate(sorted(os.listdir(input_dir))):
+            if filename.endswith('.tif'):
+                image_path = os.path.join(input_dir, filename)
+                rgb_mask, class_mask = process_and_save(model, image_path, save_dir, device)
+                
+                if return_memory_masks:
+                    rgb_masks.append(rgb_mask)
+                    class_masks.append(class_mask)
+    
+    if return_memory_masks:
+        return save_dir, rgb_masks, class_masks
+    else:
+        return save_dir

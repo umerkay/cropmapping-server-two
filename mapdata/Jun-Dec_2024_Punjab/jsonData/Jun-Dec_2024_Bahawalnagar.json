@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Bahawalnagar for Jun-Dec 2024",
+  "cropTypeData": {
+    "Wheat": 0,
+    "Cotton": 25927,
+    "Others": 651000
+  },
+  "landUseData": {
+    "Natural": 57750,
+    "Urban/Barren": 2461059
+  }
+}

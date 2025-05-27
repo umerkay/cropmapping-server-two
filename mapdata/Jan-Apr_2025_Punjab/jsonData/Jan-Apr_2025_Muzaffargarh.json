@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Muzaffargarh for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 229814,
+    "Cotton": 0,
+    "Others": 323405
+  },
+  "landUseData": {
+    "Natural": 86033,
+    "Urban/Barren": 2419854
+  }
+}

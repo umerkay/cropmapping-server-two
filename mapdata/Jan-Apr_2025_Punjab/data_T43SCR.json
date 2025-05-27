@@ -1,0 +1,15 @@
+{
+    "description": "Crop classification for tile T43SCR",
+    "model": "Prithvi 300M",
+    "source": "NASA HLS Sentinel-2 30m",
+    "tiles": [
+        [
+            "stitched_tile_T43SCR.png",
+            32.53368692623303,
+            31.529415391072327,
+            74.03946503862869,
+            72.89350269934815
+        ]
+    ],
+    "classification_tiff": "stitched_tile_T43SCR.tiff"
+}

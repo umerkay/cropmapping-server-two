@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Jhang for Jun-Dec 2024",
+  "cropTypeData": {
+    "Wheat": 0,
+    "Cotton": 119272,
+    "Others": 363005
+  },
+  "landUseData": {
+    "Natural": 32206,
+    "Urban/Barren": 2240688
+  }
+}

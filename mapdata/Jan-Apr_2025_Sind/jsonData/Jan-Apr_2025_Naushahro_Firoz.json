@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Naushahro Firoz for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 262019,
+    "Cotton": 0,
+    "Others": 38010
+  },
+  "landUseData": {
+    "Natural": 11766,
+    "Urban/Barren": 819160
+  }
+}

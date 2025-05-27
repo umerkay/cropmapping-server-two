@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Sahiwal for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 54524,
+    "Cotton": 0,
+    "Others": 71389
+  },
+  "landUseData": {
+    "Natural": 5584,
+    "Urban/Barren": 777038
+  }
+}

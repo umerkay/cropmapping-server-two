@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Chakwal for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 112761,
+    "Cotton": 0,
+    "Others": 128307
+  },
+  "landUseData": {
+    "Natural": 185759,
+    "Urban/Barren": 792478
+  }
+}

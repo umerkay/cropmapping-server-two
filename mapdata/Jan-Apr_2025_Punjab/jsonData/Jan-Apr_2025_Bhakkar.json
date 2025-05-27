@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Bhakkar for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 360293,
+    "Cotton": 0,
+    "Others": 145063
+  },
+  "landUseData": {
+    "Natural": 7693,
+    "Urban/Barren": 1061502
+  }
+}

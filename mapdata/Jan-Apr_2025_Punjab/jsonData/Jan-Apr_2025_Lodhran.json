@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Lodhran for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 94937,
+    "Cotton": 0,
+    "Others": 34562
+  },
+  "landUseData": {
+    "Natural": 10943,
+    "Urban/Barren": 409260
+  }
+}

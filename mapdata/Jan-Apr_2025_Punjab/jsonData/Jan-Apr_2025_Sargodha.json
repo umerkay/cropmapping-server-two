@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Sargodha for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 390001,
+    "Cotton": 0,
+    "Others": 43838
+  },
+  "landUseData": {
+    "Natural": 28174,
+    "Urban/Barren": 911599
+  }
+}

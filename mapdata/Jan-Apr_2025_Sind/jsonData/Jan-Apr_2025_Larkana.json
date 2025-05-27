@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Larkana for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 56992,
+    "Cotton": 0,
+    "Others": 912504
+  },
+  "landUseData": {
+    "Natural": 6311,
+    "Urban/Barren": 1931526
+  }
+}

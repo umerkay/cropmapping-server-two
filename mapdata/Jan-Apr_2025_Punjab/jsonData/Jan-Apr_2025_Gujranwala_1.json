@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Gujranwala 1 for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 26860,
+    "Cotton": 0,
+    "Others": 124958
+  },
+  "landUseData": {
+    "Natural": 51892,
+    "Urban/Barren": 321005
+  }
+}

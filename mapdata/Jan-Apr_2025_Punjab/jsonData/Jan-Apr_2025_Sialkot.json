@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Sialkot for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 34697,
+    "Cotton": 0,
+    "Others": 171886
+  },
+  "landUseData": {
+    "Natural": 96836,
+    "Urban/Barren": 399288
+  }
+}

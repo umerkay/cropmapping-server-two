@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Mithi for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 68184,
+    "Cotton": 0,
+    "Others": 1389857
+  },
+  "landUseData": {
+    "Natural": 518153,
+    "Urban/Barren": 6367509
+  }
+}

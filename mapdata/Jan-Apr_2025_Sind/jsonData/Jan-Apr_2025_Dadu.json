@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Dadu for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 61798,
+    "Cotton": 0,
+    "Others": 461648
+  },
+  "landUseData": {
+    "Natural": 9168,
+    "Urban/Barren": 2354909
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Sheikhupura for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 43835,
+    "Cotton": 0,
+    "Others": 141909
+  },
+  "landUseData": {
+    "Natural": 63025,
+    "Urban/Barren": 687744
+  }
+}

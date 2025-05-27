@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Lahore for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 17157,
+    "Cotton": 0,
+    "Others": 61387
+  },
+  "landUseData": {
+    "Natural": 11474,
+    "Urban/Barren": 305916
+  }
+}

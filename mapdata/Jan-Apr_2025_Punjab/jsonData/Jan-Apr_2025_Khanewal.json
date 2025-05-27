@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Khanewal for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 61171,
+    "Cotton": 0,
+    "Others": 103139
+  },
+  "landUseData": {
+    "Natural": 17663,
+    "Urban/Barren": 877265
+  }
+}

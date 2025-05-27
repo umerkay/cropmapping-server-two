@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Pakpattan for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 9739,
+    "Cotton": 0,
+    "Others": 55440
+  },
+  "landUseData": {
+    "Natural": 4293,
+    "Urban/Barren": 562239
+  }
+}

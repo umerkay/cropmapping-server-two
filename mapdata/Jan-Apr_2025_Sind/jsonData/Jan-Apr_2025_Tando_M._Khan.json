@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Tando M. Khan for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 41564,
+    "Cotton": 0,
+    "Others": 227273
+  },
+  "landUseData": {
+    "Natural": 1095,
+    "Urban/Barren": 201085
+  }
+}

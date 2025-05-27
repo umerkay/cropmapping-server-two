@@ -1,0 +1,15 @@
+{
+    "description": "Crop classification for tile T42RXU",
+    "model": "Prithvi 300M",
+    "source": "NASA HLS Sentinel-2 30m",
+    "tiles": [
+        [
+            "stitched_tile_42RXU.png",
+            30.714577205775168,
+            29.738163599954685,
+            71.19088333140081,
+            70.03409883335544
+        ]
+    ],
+    "classification_tiff": "stitched_tile_42RXU.tiff"
+}

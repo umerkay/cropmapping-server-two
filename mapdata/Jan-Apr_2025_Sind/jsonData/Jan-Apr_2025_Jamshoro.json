@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Jamshoro for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 232597,
+    "Cotton": 0,
+    "Others": 342366
+  },
+  "landUseData": {
+    "Natural": 29397,
+    "Urban/Barren": 3415258
+  }
+}

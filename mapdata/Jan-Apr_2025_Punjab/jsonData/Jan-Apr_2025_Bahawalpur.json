@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Bahawalpur for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 1803615,
+    "Cotton": 0,
+    "Others": 48833
+  },
+  "landUseData": {
+    "Natural": 103246,
+    "Urban/Barren": 3184376
+  }
+}

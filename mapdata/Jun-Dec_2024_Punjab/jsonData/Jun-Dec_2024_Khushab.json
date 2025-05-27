@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Khushab for Jun-Dec 2024",
+  "cropTypeData": {
+    "Wheat": 0,
+    "Cotton": 38296,
+    "Others": 175417
+  },
+  "landUseData": {
+    "Natural": 2366,
+    "Urban/Barren": 1303071
+  }
+}

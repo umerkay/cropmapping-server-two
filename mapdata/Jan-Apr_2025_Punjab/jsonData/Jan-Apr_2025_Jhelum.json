@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Jhelum for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 27417,
+    "Cotton": 0,
+    "Others": 181373
+  },
+  "landUseData": {
+    "Natural": 4348,
+    "Urban/Barren": 1027543
+  }
+}

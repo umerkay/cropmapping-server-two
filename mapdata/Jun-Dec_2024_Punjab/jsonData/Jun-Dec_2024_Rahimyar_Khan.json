@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Rahimyar Khan for Jun-Dec 2024",
+  "cropTypeData": {
+    "Wheat": 0,
+    "Cotton": 20465,
+    "Others": 707333
+  },
+  "landUseData": {
+    "Natural": 28955,
+    "Urban/Barren": 1909108
+  }
+}

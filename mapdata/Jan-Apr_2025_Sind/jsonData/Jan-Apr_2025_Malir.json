@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Malir for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 1051,
+    "Cotton": 0,
+    "Others": 16865
+  },
+  "landUseData": {
+    "Natural": 444,
+    "Urban/Barren": 1139285
+  }
+}

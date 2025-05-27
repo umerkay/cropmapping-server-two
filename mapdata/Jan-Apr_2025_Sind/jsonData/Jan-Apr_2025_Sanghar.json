@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Sanghar for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 431968,
+    "Cotton": 0,
+    "Others": 581862
+  },
+  "landUseData": {
+    "Natural": 210790,
+    "Urban/Barren": 3091210
+  }
+}

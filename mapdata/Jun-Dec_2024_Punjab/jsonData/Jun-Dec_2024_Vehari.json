@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Vehari for Jun-Dec 2024",
+  "cropTypeData": {
+    "Wheat": 0,
+    "Cotton": 84077,
+    "Others": 388073
+  },
+  "landUseData": {
+    "Natural": 32133,
+    "Urban/Barren": 669720
+  }
+}

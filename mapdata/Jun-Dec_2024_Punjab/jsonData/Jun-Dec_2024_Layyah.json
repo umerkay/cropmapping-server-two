@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Layyah for Jun-Dec 2024",
+  "cropTypeData": {
+    "Wheat": 0,
+    "Cotton": 30076,
+    "Others": 221785
+  },
+  "landUseData": {
+    "Natural": 33747,
+    "Urban/Barren": 835820
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Okara 1 for Jun-Dec 2024",
+  "cropTypeData": {
+    "Wheat": 0,
+    "Cotton": 6422,
+    "Others": 125013
+  },
+  "landUseData": {
+    "Natural": 87420,
+    "Urban/Barren": 280422
+  }
+}

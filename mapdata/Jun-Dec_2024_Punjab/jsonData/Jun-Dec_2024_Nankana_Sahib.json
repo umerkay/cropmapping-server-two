@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Nankana Sahib for Jun-Dec 2024",
+  "cropTypeData": {
+    "Wheat": 0,
+    "Cotton": 14891,
+    "Others": 66310
+  },
+  "landUseData": {
+    "Natural": 8363,
+    "Urban/Barren": 753008
+  }
+}

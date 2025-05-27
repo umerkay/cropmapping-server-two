@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Rajan Pur for Jun-Dec 2024",
+  "cropTypeData": {
+    "Wheat": 0,
+    "Cotton": 9283,
+    "Others": 216405
+  },
+  "landUseData": {
+    "Natural": 35056,
+    "Urban/Barren": 1723289
+  }
+}

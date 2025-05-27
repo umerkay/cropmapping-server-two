@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Tando Allahyar for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 6035,
+    "Cotton": 0,
+    "Others": 218994
+  },
+  "landUseData": {
+    "Natural": 1337,
+    "Urban/Barren": 210770
+  }
+}

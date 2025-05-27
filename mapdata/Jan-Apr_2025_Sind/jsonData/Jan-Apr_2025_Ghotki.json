@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Ghotki for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 153733,
+    "Cotton": 0,
+    "Others": 285802
+  },
+  "landUseData": {
+    "Natural": 2170,
+    "Urban/Barren": 2538468
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Hyderabad for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 77934,
+    "Cotton": 0,
+    "Others": 358383
+  },
+  "landUseData": {
+    "Natural": 8424,
+    "Urban/Barren": 331344
+  }
+}

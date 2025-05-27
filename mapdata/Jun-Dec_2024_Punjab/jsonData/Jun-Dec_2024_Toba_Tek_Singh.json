@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Toba Tek Singh for Jun-Dec 2024",
+  "cropTypeData": {
+    "Wheat": 0,
+    "Cotton": 86059,
+    "Others": 246768
+  },
+  "landUseData": {
+    "Natural": 23787,
+    "Urban/Barren": 366383
+  }
+}

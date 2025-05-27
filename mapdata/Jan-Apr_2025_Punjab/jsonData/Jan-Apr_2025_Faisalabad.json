@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Faisalabad for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 249359,
+    "Cotton": 0,
+    "Others": 112968
+  },
+  "landUseData": {
+    "Natural": 4274,
+    "Urban/Barren": 971119
+  }
+}

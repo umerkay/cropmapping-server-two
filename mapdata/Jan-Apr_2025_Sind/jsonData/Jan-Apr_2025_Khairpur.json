@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Khairpur for Jan-Apr 2025",
+  "cropTypeData": {
+    "Wheat": 801215,
+    "Cotton": 0,
+    "Others": 680399
+  },
+  "landUseData": {
+    "Natural": 36708,
+    "Urban/Barren": 6604238
+  }
+}

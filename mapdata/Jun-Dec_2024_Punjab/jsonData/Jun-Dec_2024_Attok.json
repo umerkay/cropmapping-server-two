@@ -1,0 +1,12 @@
+{
+  "description": "Land and Crop data for Attok for Jun-Dec 2024",
+  "cropTypeData": {
+    "Wheat": 0,
+    "Cotton": 57246,
+    "Others": 247544
+  },
+  "landUseData": {
+    "Natural": 21599,
+    "Urban/Barren": 1158300
+  }
+}
