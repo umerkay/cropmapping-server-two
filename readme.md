@@ -173,7 +173,7 @@ The repo includes:
 
 This project is part of a research collaboration between:
 
-* **MachVis Lab, NUST**
+* **MachVis Lab, NUST** https://vision.seecs.edu.pk/
 * **NARC — National Agricultural Research Centre, Pakistan**
 * **DAAD — German Academic Exchange Service**
 
@@ -181,9 +181,10 @@ This project is part of a research collaboration between:
 
 ## 📄 Publication & Links
 
-* Final Report (Website) — *Coming Soon*
-* Poster — *Available Soon*
-* Publication — **WIP**
+* [Final Report](https://drive.google.com/file/d/1M_C4OT_KikDixXZ11TczglIBGXaYUwqB/view?usp=sharing)
+* [Poster](https://drive.google.com/file/d/1Xy4hfHb4tk_7MFunpgRp2OhvjZksdImq/view?usp=sharing)
+* [Frontend](https://cropmapping-platform.vercel.app/)
+* Publication — Manuscript in Preparation.
 
 ---
 
