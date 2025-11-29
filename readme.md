@@ -7,6 +7,10 @@ This repository contains the complete framework, preprocessing pipeline, model c
 
 The project focuses on **operational, in-season crop monitoring at 30m resolution** using multispectral imagery and state-of-the-art **ViT-based semantic segmentation** models.
 All results—including provincial maps, district crops, stitched tiles, JSON outputs, and RGB renderings—are generated using this framework.
+<img width="681" height="244" alt="image" src="https://github.com/user-attachments/assets/17f691d3-e154-49d7-a307-8352a65352d5" />
+<img width="1089" height="466" alt="image" src="https://github.com/user-attachments/assets/d4b6335b-9660-47b9-b100-852b183ce7e9" />
+<img width="696" height="336" alt="image" src="https://github.com/user-attachments/assets/c09ef5c1-77ac-4459-b25d-fe44da556ec8" />
+
 
 ---
 
