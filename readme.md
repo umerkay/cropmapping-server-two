@@ -4,7 +4,16 @@
 **Awarded: Flagship Project**
 
 This repository contains the complete framework, preprocessing pipeline, model code, and scripts used in my Final Year Project on **large-scale crop type mapping** across **Punjab and Sindh** using satellite imagery.
+---
 
+## 📄 Publication & Links
+
+* [Final Report](https://drive.google.com/file/d/1M_C4OT_KikDixXZ11TczglIBGXaYUwqB/view?usp=sharing)
+* [Poster](https://drive.google.com/file/d/1Xy4hfHb4tk_7MFunpgRp2OhvjZksdImq/view?usp=sharing)
+* [Frontend](https://cropmapping-platform.vercel.app/)
+* Publication — Manuscript in Preparation.
+
+  ---
 The project focuses on **operational, in-season crop monitoring at 30m resolution** using multispectral imagery and state-of-the-art **ViT-based semantic segmentation** models.
 All results—including provincial maps, district crops, stitched tiles, JSON outputs, and RGB renderings—are generated using this framework.
 <img width="681" height="244" alt="image" src="https://github.com/user-attachments/assets/17f691d3-e154-49d7-a307-8352a65352d5" />
@@ -180,15 +189,6 @@ This project is part of a research collaboration between:
 * **MachVis Lab, NUST** https://vision.seecs.edu.pk/
 * **NARC — National Agricultural Research Centre, Pakistan**
 * **DAAD — German Academic Exchange Service**
-
----
-
-## 📄 Publication & Links
-
-* [Final Report](https://drive.google.com/file/d/1M_C4OT_KikDixXZ11TczglIBGXaYUwqB/view?usp=sharing)
-* [Poster](https://drive.google.com/file/d/1Xy4hfHb4tk_7MFunpgRp2OhvjZksdImq/view?usp=sharing)
-* [Frontend](https://cropmapping-platform.vercel.app/)
-* Publication — Manuscript in Preparation.
 
 ---
 
